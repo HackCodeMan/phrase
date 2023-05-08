@@ -60,20 +60,13 @@ std::string letter_catter(std::string word)
 	cout << word << endl;
 	string result = "";
 	vector<char> letters_in_word(word.length());
-	cout << "letters_in_word = " << endl;
-	for (int i; i < word.length(); i++) letters_in_word[i] = char(word[i]);
-	cout << "letters_in_word = " << endl;
+	for (int i = 0; i < word.length(); i++) letters_in_word[i] = char(word[i]);
 	for (int i = 0; i < randomize(0,100); i++)
 	{
-		cout << "i = " << i << endl;
 		int rand_item = randomize(0,word.length() - 1);
-		cout << "rand_item = " << rand_item << endl;
 		char x = letters_in_word.back();
-		cout << "x = " << x << endl;
 		letters_in_word[letters_in_word.size() - 1] = letters_in_word[rand_item];
-		cout << "letters_in_word[letters_in_word.size() - 1] = " << letters_in_word[letters_in_word.size() - 1] << endl;
 		letters_in_word[rand_item] = x;
-		cout << "letters_in_word[rand_item] = " << letters_in_word[rand_item] << endl;
 	}
 	for (int i = 0; i < letters_in_word.size(); i++)
 	{

@@ -36,7 +36,7 @@ std::string word_input()
 {
 	using namespace std;
 	string result;
-	for (bool isinputed; !(isinputed);)
+	for (bool isinputed = false; !(isinputed);)
 	{
 		cout << "Введите слово, затем его буквы будут перемешаны: \n";
 		cin >> result;
@@ -57,7 +57,6 @@ std::string word_input()
 std::string letter_catter(std::string word)
 {
 	using namespace std;
-	cout << word << endl;
 	string result = "";
 	vector<char> letters_in_word(word.length());
 	for (int i = 0; i < word.length(); i++) letters_in_word[i] = char(word[i]);
@@ -109,5 +108,3 @@ int main(int argc, char const *argv[])
 	keep_windows_open();
 	return 0;
 }
-
-
